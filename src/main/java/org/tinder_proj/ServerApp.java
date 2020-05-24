@@ -49,7 +49,7 @@ public class ServerApp {
     handler.addServlet(new ServletHolder(new LoginServlet(DAO_USER)), "/login");
     handler.addServlet(new ServletHolder(new LikePageServlet(DAO_USER, DAO_LIKE, templateEngine)), "/users");
     handler.addServlet(new ServletHolder(new UserServlet(DAO_USER, DAO_LIKE, templateEngine)), "/likes");
-    handler.addServlet(new ServletHolder(new MessageServlet()), "/message/*");
+    handler.addServlet(new ServletHolder(new MessageServlet(DAO_USER, DAO_MESSAGE, templateEngine)), "/message/*");
 
 
     server.setHandler(handler);
