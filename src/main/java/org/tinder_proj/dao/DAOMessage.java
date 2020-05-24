@@ -3,10 +3,7 @@ package org.tinder_proj.dao;
 import lombok.SneakyThrows;
 import org.tinder_proj.entity.Message;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -95,4 +92,27 @@ public class DAOMessage implements DAO<Message> {
     stmt.setDate(4, Date.valueOf(message.getDate()));
     stmt.executeUpdate();
   }
+
+  public List<Message> getMessages(int from, int to) {
+    String SQL = "SELECT * FROM messages where from_id = ? and to_id = ? OR from_id = ? and to_id = ? ORDER BY date";
+    List<Message> messages = new ArrayList<>();
+    try {
+      PreparedStatement stmt = CONN.prepareStatement(SQL);
+      stmt.setInt(1, from);
+      stmt.setInt(2, to);
+      stmt.setInt(3, to);
+      stmt.setInt(4, from);
+      ResultSet resultSet = stmt.executeQuery();
+      while (resultSet.next()) {
+        messages.add(new Message(resultSet.getInt("from_id"),
+                resultSet.getInt("to_id"),
+                resultSet.getString("content"),
+                LocalDate.parse(String.valueOf(resultSet.getDate("date")))));
+      }
+    } catch (SQLException e) {
+      throw new RuntimeException("Something went wrong");
+    }
+    return messages;
+  }
+
 }
