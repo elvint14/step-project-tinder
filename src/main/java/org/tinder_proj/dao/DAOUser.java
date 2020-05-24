@@ -19,7 +19,7 @@ public class DAOUser implements DAO<User> {
   private final String SQL_get    = "SELECT * FROM users WHERE id = ?";
   private final String SQL_insert = "INSERT INTO users (username, password, photo_url, profession, last_login) VALUES (?,?,?,?,?)";
   private final String SQL_delete = "DELETE FROM users WHERE id = ?";
-  private final String SQL_update = "UPDATE users SET username = ?, password = ?, photo_url = ?, profession = ?, last_login = ?, WHERE id = ?";
+  private final String SQL_update = "UPDATE users SET username = ?, password = ?, photo_url = ?, profession = ?, last_login = ? WHERE id = ?";
   private final Connection CONN;
 
   public DAOUser(Connection connection) {
