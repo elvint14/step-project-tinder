@@ -89,6 +89,6 @@ public class LikePageServlet extends HttpServlet {
       resp.addCookie(whomCookie.get());
       resp.addCookie(idxCookie.get());
       TEMPLATE_ENGINE.render("like-page.ftl", data, resp);
-    } else resp.sendRedirect("/liked");
+    } else resp.sendRedirect("/likes");
   }
 }
