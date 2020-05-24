@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 public class DAOUser implements DAO<User> {
   private final String SQL_getAll = "SELECT * FROM users";
-  private final String SQL_getBy = "SELECT * FROM users WHERE id = ?";
+  private final String SQL_get    = "SELECT * FROM users WHERE id = ?";
   private final String SQL_insert = "INSERT INTO users (username, password, photo_url, profession, last_login) VALUES (?,?,?,?,?)";
   private final String SQL_delete = "DELETE FROM users WHERE id = ?";
   private final String SQL_update = "UPDATE users SET username = ?, password = ?, photo_url = ?, profession = ?, last_login = ?, WHERE id = ?";
@@ -53,7 +53,7 @@ public class DAOUser implements DAO<User> {
   @SneakyThrows
   @Override
   public Optional<User> get(int id) {
-    PreparedStatement stmt = CONN.prepareStatement(SQL_getBy);
+    PreparedStatement stmt = CONN.prepareStatement(SQL_get);
     stmt.setInt(1, id);
     ResultSet resultSet = stmt.executeQuery();
     return !resultSet.next() ? Optional.empty() : Optional.of(

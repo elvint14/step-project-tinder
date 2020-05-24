@@ -35,6 +35,7 @@ public class RegisterServlet extends HttpServlet {
     String password = req.getParameter("password");
     String profession = req.getParameter("profession");
     String photoUrl = req.getParameter("photoUrl");
+
     if (REGISTER_SERVICE.isRegistrable(username)) {
       REGISTER_SERVICE.register(new User(username, password, profession, photoUrl, LocalDate.now()));
       resp.sendRedirect("/login");
