@@ -63,7 +63,7 @@ public class DAOUser implements DAO<User> {
                     resultSet.getString("password"),
                     resultSet.getString("photo_url"),
                     resultSet.getString("profession"),
-                    LocalDate.parse((CharSequence) resultSet.getDate("last_login"))
+                    LocalDate.parse(String.valueOf(resultSet.getDate("last_login")))
             )
     );
   }

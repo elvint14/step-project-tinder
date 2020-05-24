@@ -39,7 +39,7 @@ public class DAOMessage implements DAO<Message> {
       int to_id = resultSet.getInt("to_id");
       String content = resultSet.getString("content");
       Date date = resultSet.getDate("date");
-      data.add(new Message(id, from_id, to_id, content, LocalDate.parse((CharSequence) date)));
+      data.add(new Message(id, from_id, to_id, content, LocalDate.parse(String.valueOf(date))));
     }
     return data;
   }
@@ -61,7 +61,7 @@ public class DAOMessage implements DAO<Message> {
                     resultSet.getInt("from_id"),
                     resultSet.getInt("to_id"),
                     resultSet.getString("content"),
-                    LocalDate.parse((CharSequence) resultSet.getDate("date"))
+                    LocalDate.parse(String.valueOf(resultSet.getDate("date")))
             )
     );
   }
