@@ -27,8 +27,7 @@ public class LikePageService {
     Optional<Like> isReactedBefore = DAO_LIKE.getAll()
             .stream()
             .filter(like -> like.getWho_id() == who_id
-                    && like.getWhom_id() == whom_id
-                    && like.isReaction() == reaction)
+                    && like.getWhom_id() == whom_id)
             .findFirst();
 
     if (isReactedBefore.isPresent()) {
