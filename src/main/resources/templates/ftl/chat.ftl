@@ -49,7 +49,7 @@
         <div class="col-md-12 chats pt-3 pl-2 pr-3 pb-3">
           <ul class="p-0">
               <#list messages as message>
-                  <#if message.toUserId == receiver_id>
+                  <#if message.to_id == receiver_id>
                     <li class="send-msg float-right mb-2">
                       <p class="pt-1 pb-1 pl-2 pr-2 m-0 rounded">
                           ${message.content}
@@ -64,7 +64,7 @@
                         <p class="bg-white m-0 pt-1 pb-1 pl-2 pr-2 rounded">
                             ${message.content}
                         </p>
-                        <span class="receive-msg-time">${message.dateString}</span>
+                        <span class="receive-msg-time">${message.date}</span>
                       </div>
                     </li>
                   </#if>
