@@ -2,8 +2,8 @@ package org.tinder_proj;
 
 public class HerokuEnv {
   private static final String PORT = "PORT";
-  private static final String JDBC_DATABASE_URL = "JDBC_DATABASE_URL";
   private static final String EMPTY = " is empty!!!";
+  private static final String JDBC_DATABASE_URL = "JDBC_DATABASE_URL";
   private static final String JDBC_DATABASE_USERNAME = "JDBC_DATABASE_USERNAME";
   private static final String JDBC_DATABASE_PASSWORD = "JDBC_DATABASE_PASSWORD";
 

@@ -11,7 +11,7 @@ public class RegisterService {
   }
 
   public boolean isRegistrable(String username) {
-    return DAO_USER.getAll().stream().noneMatch(user -> user.getUsername().equals(username));
+    return DAO_USER.getBy(user -> user.getUsername().equals(username)).size() == 0;
   }
 
   public void register(User user) {
