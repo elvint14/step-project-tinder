@@ -35,8 +35,7 @@ public class UserServlet extends HttpServlet {
     int who_id = strToInt(getCookieValue(whoCookie));
 
     List<User> likedUsers = USERS_SERVICE.getLikedUsers(who_id);
-
-
+    
     if (likedUsers.size() != 0) {
       HashMap<String, Object> hashMap = new HashMap<>();
       hashMap.put("listOfLikedUsers", likedUsers);

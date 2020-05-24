@@ -33,12 +33,12 @@
                   <#list listOfLikedUsers as users>
                 <td width="10">
                   <div class="avatar-img">
-                    <img class="img-circle" style="width:100px;height:100px;" src="${users.urlPhoto}"/>
+                    <img class="img-circle" style="width:100px;height:100px;" src="${users.photo_url}"/>
                   </div>
                 </td>
                 <td class="align-middle">
                   <!--  Herbert Hoover               -->
-                    ${users.userId}
+                    ${users.id}
                 </td>
                 <td class="align-middle">
                   <!--Builder Sales Agent-->
