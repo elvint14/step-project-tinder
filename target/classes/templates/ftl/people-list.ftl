@@ -11,10 +11,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
         integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <!-- Bootstrap core CSS -->
-  <!-- <link href="../css/bootstrap.min.css" rel="stylesheet"> -->
-  <link href="/content/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="/content/css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
@@ -33,12 +32,12 @@
                   <#list listOfLikedUsers as users>
                 <td width="10">
                   <div class="avatar-img">
-                    <img class="img-circle" style="width:100px;height:100px;" src="${users.urlPhoto}"/>
+                    <img class="img-circle" style="width:100px;height:100px;" src="${users.photo_url}"/>
                   </div>
                 </td>
                 <td class="align-middle">
                   <!--  Herbert Hoover               -->
-                    ${users.userId}
+                    ${users.id}
                 </td>
                 <td class="align-middle">
                   <!--Builder Sales Agent-->
