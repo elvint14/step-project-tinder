@@ -14,7 +14,6 @@ org\tinder_proj\utils\Converters.class
 org\tinder_proj\entity\Message.class
 org\tinder_proj\db\DbSetup.class
 org\tinder_proj\servlets\LoginServlet.class
-org\tinder_proj\servlets\StudentServlet.class
 org\tinder_proj\db\DbConn.class
 org\tinder_proj\utils\GetReqData.class
 org\tinder_proj\dao\DAOMessage.class
@@ -22,12 +21,9 @@ org\tinder_proj\servlets\RegisterServlet.class
 org\tinder_proj\ServerApp.class
 org\tinder_proj\servlets\MessageServlet.class
 org\tinder_proj\service\UsersService.class
-org\tinder_proj\dao\DAOStudentSQL.class
 org\tinder_proj\db\ConnDetails.class
 org\tinder_proj\utils\TemplateEngine.class
 org\tinder_proj\utils\Dirs.class
 org\tinder_proj\service\RegisterService.class
 org\tinder_proj\HerokuEnv.class
 org\tinder_proj\service\LikePageService.class
-org\tinder_proj\entity\Student.class
-org\tinder_proj\exceptions\UserNotFoundException.class

@@ -34,7 +34,7 @@ public class LikePageService {
     if (isReactedBefore.isPresent()) {
       Like like = isReactedBefore.get();
       like.setReaction(reaction);
-      DAO_LIKE.update(like, isReactedBefore.get().getId());
+      DAO_LIKE.update(like);
     } else DAO_LIKE.insert(new Like(who_id, whom_id, reaction));
   }
 }
