@@ -82,11 +82,13 @@ public class DAOLike implements DAO<Like> {
 
   @SneakyThrows
   @Override
-  public void update(Like like) {
+  public void update(Like like, int id) {
     PreparedStatement stmt = CONN.prepareStatement(SQL_update);
     stmt.setInt(1, like.getWho_id());
     stmt.setInt(2, like.getWhom_id());
     stmt.setBoolean(3, like.isReaction());
+    stmt.setBoolean(3, like.isReaction());
+    stmt.setInt(4, id);
     stmt.executeUpdate();
   }
 }
