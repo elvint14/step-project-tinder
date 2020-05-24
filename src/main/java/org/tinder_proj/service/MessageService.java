@@ -19,14 +19,8 @@ public class MessageService {
     this.DAO_MESSAGE = DAO_MESSAGE;
   }
 
-
   public List<Message> getMessages(int who_id, int whom_id) {
     return DAO_MESSAGE.getMessages(who_id, whom_id);
-//    return DAO_MESSAGE.getAll()
-//            .stream()
-//            .filter(msg -> (msg.getFrom_id() == who_id && msg.getTo_id() == whom_id)
-//                    || (msg.getFrom_id() == whom_id && msg.getTo_id() == who_id))
-//            .collect(Collectors.toList());
   }
 
   public User getUserInfo(int id) {
