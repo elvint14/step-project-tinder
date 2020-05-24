@@ -5,9 +5,12 @@ C:\Users\Elvin\IdeaProjects\tinder-project\src\main\java\org\tinder_proj\db\Conn
 C:\Users\Elvin\IdeaProjects\tinder-project\src\main\java\org\tinder_proj\entity\Student.java
 C:\Users\Elvin\IdeaProjects\tinder-project\src\main\java\org\tinder_proj\dao\DAOMessage.java
 C:\Users\Elvin\IdeaProjects\tinder-project\src\main\java\org\tinder_proj\dao\DAOUser.java
+C:\Users\Elvin\IdeaProjects\tinder-project\src\main\java\org\tinder_proj\servlets\LoginServlet.java
 C:\Users\Elvin\IdeaProjects\tinder-project\src\main\java\org\tinder_proj\entity\User.java
 C:\Users\Elvin\IdeaProjects\tinder-project\src\main\java\org\tinder_proj\HerokuEnv.java
+C:\Users\Elvin\IdeaProjects\tinder-project\src\main\java\org\tinder_proj\servlets\RegisterServlet.java
 C:\Users\Elvin\IdeaProjects\tinder-project\src\main\java\org\tinder_proj\servlets\StaticServlet.java
+C:\Users\Elvin\IdeaProjects\tinder-project\src\main\java\org\tinder_proj\utils\GetRequest.java
 C:\Users\Elvin\IdeaProjects\tinder-project\src\main\java\org\tinder_proj\dao\DAO.java
 C:\Users\Elvin\IdeaProjects\tinder-project\src\main\java\org\tinder_proj\dao\DAOLike.java
 C:\Users\Elvin\IdeaProjects\tinder-project\src\main\java\org\tinder_proj\dao\DAOStudentSQL.java

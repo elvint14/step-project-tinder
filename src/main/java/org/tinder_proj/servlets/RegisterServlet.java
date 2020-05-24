@@ -1,7 +1,5 @@
 package org.tinder_proj.servlets;
 
-import org.tinder_proj.utils.GetRequest;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,20 +11,17 @@ import java.nio.file.Paths;
 
 import static org.tinder_proj.utils.Dirs.TEMPLATE_DIR;
 
-public class FirstPageServlet extends HttpServlet {
+public class RegisterServlet extends HttpServlet {
 
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
     try (OutputStream os = resp.getOutputStream()) {
-      Files.copy(Paths.get(TEMPLATE_DIR, "first-page.html"), os);
+      Files.copy(Paths.get(TEMPLATE_DIR, "register.html"), os);
     }
   }
 
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    String nextPage = "login".equals(req.getParameter("action"))
-            ? "/login"
-            : "/register";
-    resp.sendRedirect(nextPage);
+
   }
 }

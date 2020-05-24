@@ -9,8 +9,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import static org.tinder_proj.utils.Dirs.TEMPLATE_DIR;
+
 public class StaticServlet extends HttpServlet {
-  private static final String ROOT_DIR = "./src/main/resources/templates/";
   private final String subPath;
 
   public StaticServlet(String subPath) {
@@ -20,7 +21,7 @@ public class StaticServlet extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
     String filename = req.getPathInfo();
-    Path path = Paths.get(ROOT_DIR, subPath, filename);
+    Path path = Paths.get(TEMPLATE_DIR, subPath, filename);
 
     try (OutputStream os = resp.getOutputStream()) {
       Files.copy(path, os);

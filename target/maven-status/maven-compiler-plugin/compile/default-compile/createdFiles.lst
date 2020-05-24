@@ -8,10 +8,13 @@ org\tinder_proj\entity\User.class
 org\tinder_proj\servlets\StaticServlet.class
 org\tinder_proj\entity\Message.class
 org\tinder_proj\db\DbSetup.class
+org\tinder_proj\servlets\LoginServlet.class
 org\tinder_proj\servlets\StudentServlet.class
 org\tinder_proj\db\DbConn.class
 org\tinder_proj\dao\DAOMessage.class
+org\tinder_proj\servlets\RegisterServlet.class
 org\tinder_proj\ServerApp.class
+org\tinder_proj\utils\GetRequest.class
 org\tinder_proj\dao\DAOStudentSQL.class
 org\tinder_proj\db\ConnDetails.class
 org\tinder_proj\utils\TemplateEngine.class
