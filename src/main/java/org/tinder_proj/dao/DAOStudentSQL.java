@@ -65,7 +65,7 @@ public class DAOStudentSQL implements DAO<Student> {
 
   @SneakyThrows
   @Override
-  public void put(Student student) {
+  public void insert(Student student) {
     PreparedStatement stmt = conn.prepareStatement(SQL_put);
     stmt.setString(1, student.getName());
     stmt.execute();
@@ -77,5 +77,10 @@ public class DAOStudentSQL implements DAO<Student> {
     PreparedStatement stmt = conn.prepareStatement(SQL_delete);
     stmt.setInt(1, id);
     stmt.execute();
+  }
+
+  @Override
+  public void update(Student student) {
+
   }
 }

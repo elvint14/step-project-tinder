@@ -1,7 +1,5 @@
 package org.tinder_proj.servlets;
 
-import org.tinder_proj.utils.GetRequest;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

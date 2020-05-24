@@ -16,4 +16,12 @@ public class User {
   private String photo_url;
   private String profession;
   private LocalDate last_login;
+
+  public User(String username, String password, String profession, String photoUrl, LocalDate last_login) {
+    this.username = username;
+    this.password = password;
+    this.profession = profession;
+    this.photo_url = photoUrl;
+    this.last_login = last_login;
+  }
 }
