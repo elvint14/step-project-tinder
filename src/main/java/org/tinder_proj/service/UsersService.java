@@ -21,7 +21,7 @@ public class UsersService {
   public List<User> getLikedUsers(int who_id) {
     return DAO_LIKE.getAll()
             .stream()
-            .filter(like -> like.getWho_id() == who_id)
+            .filter(like -> like.getWho_id() == who_id && like.isReaction())
             .map(Like::getWhom_id)
             .map(DAO_USER::get)
             .map(Optional::get)
